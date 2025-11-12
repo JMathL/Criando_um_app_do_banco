@@ -105,8 +105,41 @@ while True:
         print("Não pode escolher a mesma moeda para cambiar! Tente novamente")
         continue
       if primeira_moeda == 1 and segunda_moeda == 2:
-        resultado = valor/0.19
+        resultado = valor/0.16
         print(f"O valor cambiado foi de R$ {valor:.2f} para € {resultado:.2f}")
+      elif primeira_moeda == 1 and segunda_moeda == 3:
+        resultado = valor/0.19
+        print(f"O valor cambiado foi de R$ {valor:.2f} para US$ {resultado:.2f}")
+      elif primeira_moeda == 1 and segunda_moeda == 4:
+        resultado = valor/0.14
+        print(f"O valor cambiado foi de R$ {valor:.2f} para £ {resultado:.2f}")
+      elif primeira_moeda == 2 and segunda_moeda == 1:
+        resultado = valor*6.13
+        print(f"O valor cambiado foi de € {valor:.2f} para R$ {resultado:.2f}")
+      elif primeira_moeda == 2 and segunda_moeda == 3:
+        resultado = valor*1.16
+        print(f"O valor cambiado foi de € {valor:.2f} para US$ {resultado:.2f}")
+      elif primeira_moeda == 2 and segunda_moeda == 4:
+        resultado = valor/0.88
+        print(f"O valor cambiado foi de € {valor:.2f} para £ {resultado:.2f}")
+      elif primeira_moeda == 3 and segunda_moeda == 1:
+        resultado = valor*5.29
+        print(f"O valor cambiado foi de US$ {valor:.2f} para R$ {resultado:.2f}")
+      elif primeira_moeda == 3 and segunda_moeda == 2:
+        resultado = valor*0.86
+        print(f"O valor cambiado foi de US$ {valor:.2f} para € {resultado:.2f}")
+      elif primeira_moeda == 3 and segunda_moeda == 4:
+        resultado = valor/0.75
+        print(f"O valor cambiado foi de US$ {valor:.2f} para £ {resultado:.2f}") 
+      elif primeira_moeda == 4 and segunda_moeda == 1:
+        resultado = valor*6.95
+        print(f"O valor cambiado foi de £ {valor:.2f} para R$ {resultado:.2f}")
+      elif primeira_moeda == 4 and segunda_moeda == 2:
+        resultado = valor*1.13
+        print(f"O valor cambiado foi de £ {valor:.2f} para € {resultado:.2f}")
+      elif primeira_moeda == 4 and segunda_moeda == 3:
+        resultado = valor*1.31
+        print(f"O valor cambiado foi de £ {valor:.2f} para US$ {resultado:.2f}")         
     except ValueError as e:
       print(f"Erro: {e}")
       continue
