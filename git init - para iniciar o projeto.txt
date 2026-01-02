@@ -1,0 +1,39 @@
+git init -> para iniciar o projeto
+git add (nome do arquivo) -> para adicionar as alterações no nosso projeto
+git commit -m "(mensagem)" -> para adicionar um commit(comentário com -m e aspas("")) da alteração do projeto
+git branch -m (novo nome do arquivo/projeto) -> para mudar o nome do arquivo ou projeto
+git remote add origin (link) -> adicionando um repositório remoto ou informando onde meu código vai ficar
+git push -u origin (nome do arquivo/projeto) -> para subir o código para o GitHub
+
+						QUANDO FOR FAZER ALTERAÇÃO NO PROJETO
+
+git add (nome do arquivo) -> para adicionar as alterações no nosso projeto
+git add . -> para adicionar vários arquivos no projeto
+git commit -m "(mensagem)" -> para adicionar um commit(comentário com -m e aspas("")) que vai ficar como um ponto na história do projeto
+git push -> para subir o código para o repositório original, que está no Github
+
+							PARA UNIR AS BRANCHES
+
+git merge -> mesclar códigos em diferentes branches	
+
+				PARA REMOVER ARQUIVOS DO DIRETÓRIO DE TRABALHO OU ÁREA DE PREPARAÇÃO(ÍNDICE)
+
+git rm (nome do arquivo) -> para remover um arquivo
+git rm (nome do primeiro arquivo) (nome do segundo arquivo) -> para remover múltiplos arquivos
+git rm -r (nome do diretório/) -> para remover recursivamente o diretório e seu conteúdo
+git rm -f (nome do arquivo) -> para forçar a remoção do arquivo mesmo se houver diferença entre o arquivo no HEAD ou no índice(pois o Git bloqueia por segurança)
+git rm --cached (nome do arquivo) -> para remover do índice, mas mantém no diretório do trabalho, útil para arquivos que você quer parar de rastrear, mas não apagar localmente(exemplo: arquivos de configuração)
+				
+						 QUE FAZER APÓS A REMOÇÃO DOS ARQUIVOS
+
+git status -> para verificar o status do código
+git commit -m "mensagem" -> para confirmar a exclusão com commit
+git push origin (nome da branche) -> para enviar as mudanças para o repositório remoto(GitHub)
+
+								OBS:
+
+branches -> são ramificações do código original, como um galho da árvore, ele é independente do código original, usando para resolver bug, adicionar features(recursos), e depois de tudo feito, temos que fazer um "git merge" para mesclar a nova branche ao código original
+git merge --continue -> para finalizar um processo de merge que foi interrompido por conflitos
+git status -> para ver as informações importantes sobre as modificações e o status de preparação dos arquivos]
+git log -> para ver uma lista cronológica do histórico dos commits
+git diff -> para comparar as alterações entre o diretório de trabalho e o commit mais recente(exemplo: git diff commit1 commit2), também pode ser usado para identificar as diferenças em um arquivo específico(exemplo: git diff arquivo1.txt)
